@@ -10,6 +10,8 @@ then
 	cp -f "${WEB_CONF}" /etc/nginx/conf.d/default.conf &> /dev/null
 fi
 
+sed -i "s|root \/shared\/hesk\/;|root $HESK_PATH/;|g" /etc/nginx/conf.d/default.conf
+
 if [ "$(ls -A "${HESK_PATH}")" ]; then
    echo "$HESK_PATH is not Empty"
 else

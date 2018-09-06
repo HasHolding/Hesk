@@ -11,9 +11,7 @@ ENV ADD_LANG_URL ""
 VOLUME /shared
 VOLUME /hesk
 RUN apk add --update --no-cache php7-mysqli php7-json php7-session && \
-    mkdir -p $HESK_PATH && \
-	touch /var/log/php7/www-error.log && \
-	chmod 777 /var/log/php7/www-error.log
+    mkdir -p $HESK_PATH 
 
 COPY entrypoint.sh /bin/entrypoint.sh
 COPY default.conf /etc/nginx/conf.d/default.conf
