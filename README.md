@@ -1,5 +1,4 @@
-# Hesk
-## Help Desk Software HESK
+# Hesk - Help Desk Software
 
 ~~~~
 docker run -d -p 80:80 -v hesk_vol:/shared -e "MODE=install"  hasholding/hesk
